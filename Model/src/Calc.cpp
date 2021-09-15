@@ -1,3 +1,4 @@
+#include "..\..\View\Calc.hpp"
 #include "Calc.hpp"
 #include "Logger.hpp"
 #include "OperationKeeper.hpp"
@@ -12,6 +13,7 @@ Model::Calc::~Calc()
     delete logger;
     delete operationKeeper;
 }
+
 
 Model::Calc * Model::Calc::GetInstance() {
     std::lock_guard<std::mutex> lock(mutex_);

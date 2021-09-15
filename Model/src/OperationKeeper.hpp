@@ -14,7 +14,6 @@ namespace Model {
 		~OperationKeeper();
 	private:
 		Operations operations;
-	};
-	
+	};	
 }
 #endif // !OPERATION_KEEPER_HPP

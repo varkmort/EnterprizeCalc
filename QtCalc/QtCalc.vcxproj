@@ -98,8 +98,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.vcxproj">
-      <Project>{909fe17f-246d-4348-93b7-fb24e08b2b64}</Project>
+    <ProjectReference Include="..\View\View.vcxproj">
+      <Project>{86809060-0988-4c72-9d2c-7c0e196124f2}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

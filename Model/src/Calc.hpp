@@ -4,6 +4,8 @@
 #include <string>
 #include <thread>
 #include <mutex>
+#include <map>
+#include "Operation.hpp"
 
 namespace Model {
     class OperationKeeper;
@@ -17,7 +19,6 @@ namespace Model {
     protected:
         Calc();
         ~Calc();
-        std::string value_;
 
     public:
         Calc(Calc &other) = delete;
@@ -25,9 +26,8 @@ namespace Model {
 
         static Calc *GetInstance();
 
-        void SomeBusinessLogic() {
-            // ...
-        }
+        std::map<std::string, Model::Operation *> getOperations()const;
+    
 
         std::string value() const {
             return value_;

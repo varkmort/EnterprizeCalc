@@ -3,7 +3,7 @@
 namespace Model {
 	Operation::Operation(std::string name) :name(name) {}
 
-	std::string Operation::getName() {
+	std::string Operation::getName() const {
 		return name;
 	}
 
