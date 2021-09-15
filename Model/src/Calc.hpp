@@ -16,7 +16,7 @@ namespace Model {
         OperationKeeper *operationKeeper;
     protected:
         Calc();
-        ~Calc() {}
+        ~Calc();
         std::string value_;
 
     public:
