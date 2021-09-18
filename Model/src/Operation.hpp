@@ -14,16 +14,5 @@ namespace Model {
 	};
 
 
-	class Summ :public Operation {
-	public:
-		Summ();
-		double operator()(double a, double b) const override;
-	};
-
-	class Substruct :public Operation {
-	public:
-		Substruct();
-		double operator()(double a, double b) const override;
-	};
 }
 #endif

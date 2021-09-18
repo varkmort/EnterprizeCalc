@@ -175,12 +175,14 @@
     <ClInclude Include="src\OperationKeeper.hpp" />
     <ClInclude Include="src\Calc.hpp" />
     <ClInclude Include="src\Operation.hpp" />
+    <ClInclude Include="src\RealOperations.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Calc.cpp" />
     <ClCompile Include="src\Logger.cpp" />
     <ClCompile Include="src\OperationKeeper.cpp" />
     <ClCompile Include="src\Operation.cpp" />
+    <ClCompile Include="src\RealOperations.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

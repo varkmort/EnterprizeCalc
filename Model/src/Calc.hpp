@@ -29,8 +29,5 @@ namespace Model {
         std::map<std::string, Model::Operation *> getOperations()const;
     
 
-        std::string value() const {
-            return value_;
-        }
     };
 }
