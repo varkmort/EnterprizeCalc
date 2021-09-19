@@ -14,7 +14,6 @@ namespace View {
 	class Calc {
 	public:
 		Calc();
-		~Calc();
 		std::list<std::string> getOperations()const;
 		std::string operation(
 			std::string A, 

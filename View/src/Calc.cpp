@@ -11,7 +11,7 @@ namespace View {
 		//проверка А
 		//проверка В
 		//проверка что ключ соответсвует списку
-		double a{ ::atof(A.c_str()) }, b{ ::atof(A.c_str()) };
+		double a{ ::atof(A.c_str()) }, b{ ::atof(B.c_str()) };
 		double result{ 0 };
 		try {
 			result = operations.at(operation)->operator()(a, b);
@@ -39,3 +39,4 @@ namespace View {
 		return model.getHistori();
 	}
 }
+//ui -> service -> bl -> dal

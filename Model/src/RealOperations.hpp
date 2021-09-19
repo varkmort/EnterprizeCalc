@@ -5,15 +5,15 @@
 
 namespace Model {
 
-	class Summ :public Operation {
+	class Addition :public Operation {
 	public:
-		Summ();
+		Addition();
 		double execute(double a, double b) const override;
 	};
 
-	class Substruct :public Operation {
+	class Subtraction :public Operation {
 	public:
-		Substruct();
+		Subtraction();
 		double execute(double a, double b) const override;
 	};
 }

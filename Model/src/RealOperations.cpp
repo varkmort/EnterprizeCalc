@@ -3,15 +3,15 @@
 
 namespace Model {
 
-	Summ::Summ() :Operation("+") {}
+	Addition::Addition() :Operation("+") {}
 
-	double Summ::execute(double a, double b) const {
+	double Addition::execute(double a, double b) const {
 		return a + b;
 	}
 
-	Substruct::Substruct() :Operation("-") {}
+	Subtraction::Subtraction() :Operation("-") {}
 
-	double Substruct::execute(double a, double b) const {
+	double Subtraction::execute(double a, double b) const {
 		return a - b;
 	}
 }
