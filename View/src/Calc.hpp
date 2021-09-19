@@ -23,6 +23,6 @@ namespace View {
 		std::list<std::string> getHistory()const;
 	private:
 		std::map<std::string, Model::Operation *> operations;
-		Model::Calc *model;
+		Model::Сalculator &model;
 	};
 }

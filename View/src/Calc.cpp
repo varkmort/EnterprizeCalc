@@ -1,9 +1,9 @@
 ﻿#include "Calc.hpp"
 #include <cstdlib>
 namespace View {
-	Calc::Calc():model(Model::Calc::GetInstance())
+	Calc::Calc():model(Model::Calc::GetСalculator())
 	{
-		operations = model->getOperations();
+		operations = model.getOperations();
 	}
 
 	std::string Calc::operation(std::string A, std::string B, const std::string &operation) const
@@ -36,6 +36,6 @@ namespace View {
 	}
 
 	std::list<std::string> Calc::getHistory() const {
-		return std::list<std::string>();
+		return model.getHistori();
 	}
 }
