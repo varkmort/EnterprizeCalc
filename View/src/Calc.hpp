@@ -7,7 +7,8 @@
 #include <string>
 #include <list>
 #include <map>
-#include "..\Model\src\Calc.hpp"
+#include "..\..\Model\src\Calc.hpp"
+
 
 namespace View {
 	class Calc {
@@ -18,10 +19,10 @@ namespace View {
 		std::string operation(
 			std::string A, 
 			std::string B, 
-			std::string operation)const;
+			const std::string &operation)const;
 		std::list<std::string> getHistory()const;
 	private:
 		std::map<std::string, Model::Operation *> operations;
-		Model::Calc *model;
+		Model::Сalculator &model;
 	};
 }

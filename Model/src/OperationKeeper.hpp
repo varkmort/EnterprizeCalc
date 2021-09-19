@@ -4,6 +4,7 @@
 #include <list>
 
 #include "Operation.hpp"
+#include "RealOperations.hpp"
 
 namespace Model {
 	class OperationKeeper {

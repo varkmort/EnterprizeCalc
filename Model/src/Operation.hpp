@@ -8,22 +8,14 @@ namespace Model {
 	public:
 		Operation(std::string name);
 		std::string getName()const;
-		virtual double operator()(double a, double b) const = 0;
+		double operator()(double a, double b) const;
+	protected:
+		void putLog(std::string name, double a, double b, double res)const;
+		virtual double execute(double a, double b) const = 0;
 	private:
 		std::string name;
 	};
 
 
-	class Summ :public Operation {
-	public:
-		Summ();
-		double operator()(double a, double b) const override;
-	};
-
-	class Substruct :public Operation {
-	public:
-		Substruct();
-		double operator()(double a, double b) const override;
-	};
 }
 #endif

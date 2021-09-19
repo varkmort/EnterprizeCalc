@@ -171,10 +171,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Calc.hpp" />
+    <ClInclude Include="src\Calc.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Calc.cpp" />
+    <ClCompile Include="src\Calc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.vcxproj">
