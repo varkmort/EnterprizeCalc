@@ -10,12 +10,12 @@ void Model::Logger::addRecord(std::string name, double a, double b, double res) 
 	record += '=';
 	record += std::to_string(res);
 	std::lock_guard guard{ mut };
-	actions.push(record);
+	actions.push_back(record);
 }
 
 std::list<std::string> Model::Logger::getCurrent() {
 	std::lock_guard guard{ mut };
-	return std::list<std::string>({ actions._Get_container().begin(), actions._Get_container().end()});
+	return std::list<std::string>({ actions.begin(), actions.end()});
 }
 
 Model::Logger::~Logger() {
@@ -23,7 +23,7 @@ Model::Logger::~Logger() {
 	if (outf.is_open()) {
 		while (!actions.empty()) {
 			outf<< actions.front() << '\n';
-			actions.pop();
+			actions.pop_front();
 		}
 	}
 	outf.close();

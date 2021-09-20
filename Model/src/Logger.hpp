@@ -5,6 +5,7 @@
 #include <fstream>
 #include <list>
 #include <mutex>
+#include <string>
 
 
 namespace Model {
@@ -17,7 +18,7 @@ namespace Model {
 		//History getAll();
 		~Logger();
 	private:
-		std::queue<std::string> actions;
+		std::list<std::string> actions;
 		std::string logFilename;
 		std::mutex mut;
 	};

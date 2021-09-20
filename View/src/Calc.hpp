@@ -14,12 +14,11 @@ namespace View {
 	class Calc {
 	public:
 		Calc();
-		~Calc();
 		std::list<std::string> getOperations()const;
 		std::string operation(
 			std::string A, 
 			std::string B, 
-			const std::string &operation)const;
+			std::string operation)const;
 		std::list<std::string> getHistory()const;
 	private:
 		std::map<std::string, Model::Operation *> operations;

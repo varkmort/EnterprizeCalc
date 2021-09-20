@@ -1,8 +1,10 @@
 #include "OperationKeeper.hpp"
 namespace Model {
 	OperationKeeper::OperationKeeper() {
-		operations.push_back(new Summ);
-		operations.push_back(new Substruct);	
+		operations.push_back(new Addition);
+		operations.push_back(new Subtraction);	
+		operations.push_back(new Multiply);
+		operations.push_back(new Division);
 	}
 
 	const std::list<Operation *> &OperationKeeper::getOperations() const {

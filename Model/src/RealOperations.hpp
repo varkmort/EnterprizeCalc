@@ -5,17 +5,29 @@
 
 namespace Model {
 
-	class Summ :public Operation {
+	class Addition :public Operation {
 	public:
-		Summ();
+		Addition();
 		double execute(double a, double b) const override;
 	};
 
-	class Substruct :public Operation {
+	class Subtraction :public Operation {
 	public:
-		Substruct();
+		Subtraction();
 		double execute(double a, double b) const override;
 	};
+
+	class Multiply:public Operation {
+	public:
+		Multiply();
+		double execute(double a, double b) const override;
+	};
+	class Division :public Operation {
+	public:
+		Division();
+		double execute(double a, double b) const override;
+	};
+
 }
 
 #endif // !REAL_OPERATONS_HPP
