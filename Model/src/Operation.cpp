@@ -21,4 +21,6 @@ namespace Model {
 		temp.takeRecord(name,  a,  b,  res);	
 	}
 
+
+
 }

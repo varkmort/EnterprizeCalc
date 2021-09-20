@@ -7,6 +7,8 @@
 #ifndef PCH_H
 #define PCH_H
 
+
+#include <type_traits>
 // Добавьте сюда заголовочные файлы для предварительной компиляции
 
 #endif //PCH_H

@@ -11,7 +11,7 @@ namespace Model {
 		double operator()(double a, double b) const;
 	protected:
 		void putLog(std::string name, double a, double b, double res)const;
-		virtual double execute(double a, double b) const = 0;
+		virtual double execute(double a, double b) const =0;
 	private:
 		std::string name;
 	};

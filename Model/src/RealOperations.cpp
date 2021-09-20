@@ -1,35 +1,12 @@
 #include "RealOperations.hpp"
-
+#include <stdexcept>
 
 namespace Model {
 
 	Addition::Addition() :Operation("+") {}
 
 	double Addition::execute(double a, double b) const {
-		//если очень хочется огребать на работе
-		//static int i = 0;
-		//if (i == 0) {
-		//	i++;
-		//	return 0.0;
-		//}
-		//if (i == 1) {
-		//	i++;
-		//	return 10.0;
-		//}
-		//if (i == 2) {
-		//	i++;
-		//	return 0.0;
-		//}		
-		//if (i == 3) {
-		//	i++;
-		//	return 0.0;
-		//}
-		//if (i == 4) {
-		//	i++;
-		//	return -10.0;
-		//}
 		return a+b;
-
 	}
 
 	Subtraction::Subtraction() :Operation("-") {}
@@ -47,6 +24,7 @@ namespace Model {
 	Division::Division():Operation("/"){}
 
 	double Division::execute(double a, double b) const {
+		if (!b)throw std::invalid_argument::invalid_argument(std::to_string(b));
 		return a / b;
 	}
 }
