@@ -16,9 +16,15 @@ namespace Model {
 		Subtraction();
 		double execute(double a, double b) const override;
 	};
+
 	class Multiply:public Operation {
 	public:
 		Multiply();
+		double execute(double a, double b) const override;
+	};
+	class Division :public Operation {
+	public:
+		Division();
 		double execute(double a, double b) const override;
 	};
 
