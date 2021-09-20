@@ -6,7 +6,7 @@ namespace View {
 		operations = model.getOperations();
 	}
 
-	std::string Calc::operation(std::string A, std::string B, const std::string &operation) const
+	std::string Calc::operation(std::string A, std::string B, std::string operation) const
 	{
 		//проверка А
 		//проверка В

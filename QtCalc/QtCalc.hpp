@@ -13,8 +13,12 @@ public:
     QtCalc(QWidget *parent = Q_NULLPTR);
     ~QtCalc();
 
+private slots:
+    void calculate();
+
+
 private:
     Ui::QtCalcClass *ui;
     View::Calc *calc;
-    QString currentOperation;
+    QList<QRadioButton *> operations;
 };

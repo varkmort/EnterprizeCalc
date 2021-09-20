@@ -14,4 +14,10 @@ namespace Model {
 	double Subtraction::execute(double a, double b) const {
 		return a - b;
 	}
+
+	Multiply::Multiply() :Operation("*") {}
+
+	double Multiply::execute(double a, double b) const {
+		return a*b;
+	}
 }

@@ -3,6 +3,7 @@ namespace Model {
 	OperationKeeper::OperationKeeper() {
 		operations.push_back(new Addition);
 		operations.push_back(new Subtraction);	
+		operations.push_back(new Multiply);
 	}
 
 	const std::list<Operation *> &OperationKeeper::getOperations() const {

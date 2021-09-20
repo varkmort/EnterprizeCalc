@@ -8,12 +8,25 @@ QtCalc::QtCalc(QWidget *parent):
     ui->setupUi(this);
     auto commands{ calc->getOperations() };
     for (auto &command : commands) {
-        ui->toolBar->addWidget(new QRadioButton(QString(command.c_str())));
+        auto temp = new QRadioButton(QString(command.c_str()));
+        operations.append(temp);
+        ui->toolBar->addWidget(temp);
     }
-    //запрос на список команд
-    //создать кноптк под команды
-    //ui.verticalLayout->addItem();
-    //связять кнопки с командами view
+    QObject::connect(ui->pushButton_12, &QPushButton::clicked, this, &QtCalc::calculate);
 }
 
-QtCalc::~QtCalc() {}
+QtCalc::~QtCalc() {
+    delete ui;
+    delete calc;
+}
+
+void QtCalc::calculate() {
+    std::string temp;
+    for (auto el : operations) {
+        if (el->isChecked()) {
+            temp = el->text().toStdString();
+            break;
+        }
+    }
+    ui->lineEdit_3->setText(QString(calc->operation(ui->lineEdit->text().toStdString(), ui->lineEdit_2->text().toStdString(), temp).c_str()));
+}

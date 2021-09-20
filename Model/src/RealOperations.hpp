@@ -16,6 +16,12 @@ namespace Model {
 		Subtraction();
 		double execute(double a, double b) const override;
 	};
+	class Multiply:public Operation {
+	public:
+		Multiply();
+		double execute(double a, double b) const override;
+	};
+
 }
 
 #endif // !REAL_OPERATONS_HPP
