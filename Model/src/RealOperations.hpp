@@ -2,27 +2,32 @@
 #define REAL_OPERATONS_HPP
 
 #include "Operation.hpp"
+#ifdef MODEL_EXPORTS
+#define DECLSPEC __declspec(dllexport)
+#else
+#define DECLSPEC __declspec(dllimport)
+#endif // MODEL_EXPORTS
 
 namespace Model {
 
-	class Addition :public Operation {
+	class DECLSPEC Addition :public Operation {
 	public:
 		Addition();
 		double execute(double a, double b) const override;
 	};
 
-	class Subtraction :public Operation {
+	class DECLSPEC Subtraction :public Operation {
 	public:
 		Subtraction();
 		double execute(double a, double b) const override;
 	};
 
-	class Multiply:public Operation {
+	class DECLSPEC Multiply:public Operation {
 	public:
 		Multiply();
 		double execute(double a, double b) const override;
 	};
-	class Division :public Operation {
+	class DECLSPEC Division :public Operation {
 	public:
 		Division();
 		double execute(double a, double b) const override;

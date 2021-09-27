@@ -2,9 +2,14 @@
 #define OPERATION_HPP
 #include <string>
 
+#ifdef MODEL_EXPORTS
+#define DECLSPEC __declspec(dllexport)
+#else
+#define DECLSPEC __declspec(dllimport)
+#endif // MODEL_EXPORTS
 
 namespace Model {
-	class Operation {
+	class DECLSPEC Operation {
 	public:
 		Operation(std::string name);
 		std::string getName()const;

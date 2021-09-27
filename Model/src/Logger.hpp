@@ -7,9 +7,14 @@
 #include <mutex>
 #include <string>
 
+#ifdef MODEL_EXPORTS
+#define DECLSPEC __declspec(dllexport)
+#else
+#define DECLSPEC __declspec(dllimport)
+#endif // MODEL_EXPORTS
 
 namespace Model {
-	class Logger {
+	class DECLSPEC Logger {
 	public:
 		Logger();
 		void addRecord(std::string name, double a, double b, double res);

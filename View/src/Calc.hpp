@@ -7,13 +7,24 @@
 #include <string>
 #include <list>
 #include <map>
-#include "..\..\Model\src\Calc.hpp"
 
+
+
+#ifdef VIEW_DLLEXPORT
+#define DECLSPEC __declspec(dllexport)
+#else
+#define DECLSPEC __declspec(dllimport)
+#endif // MODEL_EXPORTS
+
+namespace Model {
+	class Сalculator;
+}
 
 namespace View {
-	class Calc {
+	class DECLSPEC Calc {
 	public:
-		Calc();
+		Calc(void);
+		~Calc(void);
 		std::list<std::string> getOperations()const;
 		std::string operation(
 			std::string A, 
@@ -21,7 +32,7 @@ namespace View {
 			std::string operation)const;
 		std::list<std::string> getHistory()const;
 	private:
-		std::map<std::string, Model::Operation *> operations;
+		std::list<std::string> operations;
 		Model::Сalculator &model;
 	};
 }

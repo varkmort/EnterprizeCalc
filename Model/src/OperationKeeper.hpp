@@ -5,9 +5,14 @@
 
 #include "Operation.hpp"
 #include "RealOperations.hpp"
+#ifdef MODEL_EXPORTS
+#define DECLSPEC __declspec(dllexport)
+#else
+#define DECLSPEC __declspec(dllimport)
+#endif // MODEL_EXPORTS
 
 namespace Model {
-	class OperationKeeper {
+	class DECLSPEC OperationKeeper {
 	public:
 		OperationKeeper();
 		using Operations = std::list<Operation *>;
