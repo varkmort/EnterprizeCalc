@@ -2,6 +2,7 @@
 #define REAL_OPERATONS_HPP
 
 #include "Operation.hpp"
+
 #ifdef MODEL_EXPORTS
 #define DECLSPEC __declspec(dllexport)
 #else
@@ -13,8 +14,10 @@ namespace Model {
 	class DECLSPEC Addition :public Operation {
 	public:
 		Addition();
-		double execute(double a, double b) const override;
+		double execute(double a, double b) const override;		
 	};
+
+	//extern "C" DECLSPEC Addition operator+(const Addition &, const Addition &);
 
 	class DECLSPEC Subtraction :public Operation {
 	public:
