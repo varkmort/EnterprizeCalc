@@ -1,6 +1,8 @@
 ﻿#include "Calc.hpp"
 #include <cstdlib>
+
 namespace View {
+	
 	Calc::Calc():model(Model::Calc::GetСalculator())
 	{
 		operations = model.getOperations();
