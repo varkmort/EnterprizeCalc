@@ -5,6 +5,9 @@ namespace Model {
 		operations.push_back(new Subtraction);	
 		operations.push_back(new Multiply);
 		operations.push_back(new Division);
+		operations.push_back(new XOR);
+		operations.push_back(new Pow);
+		operations.push_back(new Remainder);
 	}
 
 	const std::list<Operation *> &OperationKeeper::getOperations() const {

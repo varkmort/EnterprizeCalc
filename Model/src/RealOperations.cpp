@@ -49,4 +49,30 @@ namespace Model {
 	double Division::execute(double a, double b) const {
 		return a / b;
 	}
+
+	XOR::XOR():Operation("^"){}
+
+	double XOR::execute(double a, double b) const 
+	{
+		int fN = static_cast<int16_t>(a);
+		int sN = static_cast<int16_t>(b);
+		return fN ^ sN;
+	}
+
+	Pow::Pow():Operation("**"){}
+	double Pow::execute(double a, double b) const
+	{
+		return pow(a, b);
+	}
+
+	Remainder::Remainder():Operation("%"){}
+
+	double Remainder::execute(double a, double b) const
+	{
+		int fN = a;
+		int sN = b;
+		return fN % sN;
+	}
+
+
 }

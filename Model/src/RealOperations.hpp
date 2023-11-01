@@ -27,6 +27,25 @@ namespace Model {
 		Division();
 		double execute(double a, double b) const override;
 	};
+	class XOR :public Operation
+	{
+	public:
+		XOR();
+		double execute(double a, double b) const override;
+	};
+	class Pow :public Operation
+	{
+	public:
+		Pow();
+		double execute(double a, double b) const override;
+	};
+
+	class Remainder :public Operation
+	{
+	public:
+		Remainder();
+		double execute(double a, double b) const override;
+	};
 
 }
 
