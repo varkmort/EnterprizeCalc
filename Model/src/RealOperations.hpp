@@ -28,6 +28,32 @@ namespace Model {
 		double execute(double a, double b) const override;
 	};
 
+	class Ostatok : public Operation {
+	public:
+		Ostatok();
+		double execute(double a, double b) const override;
+	};
+
+	class Stepen : public Operation {
+	public:
+		Stepen();
+		double execute(double a, double b) const override;
+	};
+
+
+	class Tetration :public Operation
+	{
+	public:
+		Tetration();
+		double execute(double a, double b) const override;
+	};
+
+	class Square :public Operation
+	{
+	public:
+		Square();
+		double execute(double a, double b) const override;
+	};
 }
 
 #endif // !REAL_OPERATONS_HPP
