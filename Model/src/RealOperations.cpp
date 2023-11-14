@@ -49,4 +49,44 @@ namespace Model {
 	double Division::execute(double a, double b) const {
 		return a / b;
 	}
+
+	Ostatok::Ostatok() :Operation("%") {}
+
+	double Ostatok::execute(double a, double b) const {
+		return static_cast<int>(a) % static_cast<int>(b);
+	}
+
+	Stepen::Stepen() :Operation("^") {}
+
+	double Stepen::execute(double a, double b) const {
+
+		return std::pow(a, b);
+	}
+
+	Tetration::Tetration() :Operation("^^") {}
+
+	double Tetration::execute(double a, double b) const {
+
+		double res = a;
+		for (size_t i = 0; i < b; i++)
+		{
+			res = std::pow(res, a);
+
+		}
+		return res;
+	}
+
+	Square::Square() :Operation("$") {}
+
+	double Square::execute(double a, double b) const
+	{
+		if (b == 2)
+		{
+			return std::sqrt(a);
+		}
+		else if (b == 3) {
+			return std::cbrt(a);
+		}
+	}
+
 }
