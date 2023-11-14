@@ -49,6 +49,16 @@ namespace Model {
 	double Division::execute(double a, double b) const {
 		return a / b;
 	}
+  
+	XOR::XOR():Operation("^"){}
+
+	double XOR::execute(double a, double b) const 
+	{
+		int fN = static_cast<int16_t>(a);
+		int sN = static_cast<int16_t>(b);
+		return fN ^ sN;
+	}
+
 	Root::Root() :Operation("sqrt") {}
 
 	double Root::execute(double a, double b) const
@@ -73,6 +83,7 @@ namespace Model {
 	{
 		return pow(a, b);
 	}
+
 
 	Tetration::Tetration() : Operation("^_^"){}
 

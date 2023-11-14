@@ -27,6 +27,13 @@ namespace Model {
 		Division();
 		double execute(double a, double b) const override;
 	};
+	class XOR :public Operation
+	{
+	public:
+		XOR();
+		double execute(double a, double b) const override;
+	};
+
 	class Root : public Operation {
 	public:
 		Root();
