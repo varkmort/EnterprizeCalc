@@ -33,20 +33,51 @@ namespace Model {
 		XOR();
 		double execute(double a, double b) const override;
 	};
-	class Pow :public Operation
-	{
+
+	class Root : public Operation {
 	public:
-		Pow();
+		Root();
+		double execute(double a, double b)const override;
+	};
+
+	class Poww :public Operation {
+	public:
+		Poww();
 		double execute(double a, double b) const override;
 	};
 
-	class Remainder :public Operation
-	{
+	class Tetration :public Operation {
 	public:
-		Remainder();
+		Tetration();
 		double execute(double a, double b) const override;
 	};
 
+	class Ostatok : public Operation {
+	public:
+		Ostatok();
+		double execute(double a, double b) const override;
+	};
+
+	class Stepen : public Operation {
+	public:
+		Stepen();
+		double execute(double a, double b) const override;
+	};
+
+
+	class Tetration :public Operation
+	{
+	public:
+		Tetration();
+		double execute(double a, double b) const override;
+	};
+
+	class Square :public Operation
+	{
+	public:
+		Square();
+		double execute(double a, double b) const override;
+	};
 }
 
 #endif // !REAL_OPERATONS_HPP

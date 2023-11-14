@@ -6,7 +6,7 @@ namespace Model {
 	Addition::Addition() :Operation("+") {}
 
 	double Addition::execute(double a, double b) const {
-		//если очень хочется огребать на работе
+		//ГҐГ±Г«ГЁ Г®Г·ГҐГ­Гј ГµГ®Г·ГҐГІГ±Гї Г®ГЈГ°ГҐГЎГ ГІГј Г­Г  Г°Г ГЎГ®ГІГҐ
 		//static int i = 0;
 		//if (i == 0) {
 		//	i++;
@@ -49,7 +49,7 @@ namespace Model {
 	double Division::execute(double a, double b) const {
 		return a / b;
 	}
-
+  
 	XOR::XOR():Operation("^"){}
 
 	double XOR::execute(double a, double b) const 
@@ -59,20 +59,73 @@ namespace Model {
 		return fN ^ sN;
 	}
 
-	Pow::Pow():Operation("**"){}
-	double Pow::execute(double a, double b) const
+	Root::Root() :Operation("sqrt") {}
+
+	double Root::execute(double a, double b) const
+	{
+		if (b == 0) {
+			return 1;
+		}
+		if (a == 0) {
+			return a;
+		}
+		if (b == 1) {
+			return a;
+		}
+		else {
+			return pow(a, 1 / b);
+		}
+	}
+
+	Poww::Poww() :Operation("**") {}
+
+	double Poww::execute(double a, double b) const
 	{
 		return pow(a, b);
 	}
 
-	Remainder::Remainder():Operation("%"){}
 
-	double Remainder::execute(double a, double b) const
-	{
-		int fN = a;
-		int sN = b;
-		return fN % sN;
+	Tetration::Tetration() : Operation("^_^"){}
+
+	double Tetration::execute(double a, double b) const {
+		double tmp = a;
+		for (int i = 0; i < b; i++) {
+			tmp = pow(tmp, a);
+		}
+		return tmp;
+		
+	}
+
+	Ostatok::Ostatok() :Operation("%") {}
+
+	double Ostatok::execute(double a, double b) const {
+		return static_cast<int>(a) % static_cast<int>(b);
 	}
 
 
+	Tetration::Tetration() :Operation("^^") {}
+
+	double Tetration::execute(double a, double b) const {
+
+		double res = a;
+		for (size_t i = 0; i < b; i++)
+		{
+			res = std::pow(res, a);
+
+		}
+		return res;
+	}
+
+	Square::Square() :Operation("$") {}
+
+	double Square::execute(double a, double b) const
+	{
+		if (b == 2)
+		{
+			return std::sqrt(a);
+		}
+		else if (b == 3) {
+			return std::cbrt(a);
+		}
+	}
 }
