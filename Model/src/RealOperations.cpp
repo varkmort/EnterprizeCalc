@@ -6,7 +6,7 @@ namespace Model {
 	Addition::Addition() :Operation("+") {}
 
 	double Addition::execute(double a, double b) const {
-		//если очень хочется огребать на работе
+		//ГҐГ±Г«ГЁ Г®Г·ГҐГ­Гј ГµГ®Г·ГҐГІГ±Гї Г®ГЈГ°ГҐГЎГ ГІГј Г­Г  Г°Г ГЎГ®ГІГҐ
 		//static int i = 0;
 		//if (i == 0) {
 		//	i++;
@@ -49,7 +49,6 @@ namespace Model {
 	double Division::execute(double a, double b) const {
 		return a / b;
 	}
-
 	Root::Root() :Operation("sqrt") {}
 
 	double Root::execute(double a, double b) const
@@ -86,5 +85,36 @@ namespace Model {
 		
 	}
 
-	
+	Ostatok::Ostatok() :Operation("%") {}
+
+	double Ostatok::execute(double a, double b) const {
+		return static_cast<int>(a) % static_cast<int>(b);
+	}
+
+
+	Tetration::Tetration() :Operation("^^") {}
+
+	double Tetration::execute(double a, double b) const {
+
+		double res = a;
+		for (size_t i = 0; i < b; i++)
+		{
+			res = std::pow(res, a);
+
+		}
+		return res;
+	}
+
+	Square::Square() :Operation("$") {}
+
+	double Square::execute(double a, double b) const
+	{
+		if (b == 2)
+		{
+			return std::sqrt(a);
+		}
+		else if (b == 3) {
+			return std::cbrt(a);
+		}
+	}
 }
