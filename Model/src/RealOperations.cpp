@@ -6,7 +6,7 @@ namespace Model {
 	Addition::Addition() :Operation("+") {}
 
 	double Addition::execute(double a, double b) const {
-		//если очень хочется огребать на работе
+		//ГҐГ±Г«ГЁ Г®Г·ГҐГ­Гј ГµГ®Г·ГҐГІГ±Гї Г®ГЈГ°ГҐГЎГ ГІГј Г­Г  Г°Г ГЎГ®ГІГҐ
 		//static int i = 0;
 		//if (i == 0) {
 		//	i++;
@@ -49,6 +49,41 @@ namespace Model {
 	double Division::execute(double a, double b) const {
 		return a / b;
 	}
+	Root::Root() :Operation("sqrt") {}
+
+	double Root::execute(double a, double b) const
+	{
+		if (b == 0) {
+			return 1;
+		}
+		if (a == 0) {
+			return a;
+		}
+		if (b == 1) {
+			return a;
+		}
+		else {
+			return pow(a, 1 / b);
+		}
+	}
+
+	Poww::Poww() :Operation("**") {}
+
+	double Poww::execute(double a, double b) const
+	{
+		return pow(a, b);
+	}
+
+	Tetration::Tetration() : Operation("^_^"){}
+
+	double Tetration::execute(double a, double b) const {
+		double tmp = a;
+		for (int i = 0; i < b; i++) {
+			tmp = pow(tmp, a);
+		}
+		return tmp;
+		
+	}
 
 	Ostatok::Ostatok() :Operation("%") {}
 
@@ -56,12 +91,6 @@ namespace Model {
 		return static_cast<int>(a) % static_cast<int>(b);
 	}
 
-	Stepen::Stepen() :Operation("^") {}
-
-	double Stepen::execute(double a, double b) const {
-
-		return std::pow(a, b);
-	}
 
 	Tetration::Tetration() :Operation("^^") {}
 
@@ -88,5 +117,4 @@ namespace Model {
 			return std::cbrt(a);
 		}
 	}
-
 }

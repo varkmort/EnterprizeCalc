@@ -3,6 +3,7 @@
 #include <string>
 #include <cmath>
 
+
 namespace Model {
 	class Operation {
 	public:

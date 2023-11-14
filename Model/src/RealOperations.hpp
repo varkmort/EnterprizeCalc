@@ -27,6 +27,23 @@ namespace Model {
 		Division();
 		double execute(double a, double b) const override;
 	};
+	class Root : public Operation {
+	public:
+		Root();
+		double execute(double a, double b)const override;
+	};
+
+	class Poww :public Operation {
+	public:
+		Poww();
+		double execute(double a, double b) const override;
+	};
+
+	class Tetration :public Operation {
+	public:
+		Tetration();
+		double execute(double a, double b) const override;
+	};
 
 	class Ostatok : public Operation {
 	public:
