@@ -63,7 +63,7 @@ namespace ModelTest
 					break;
 				}
 			}
-			Assert::IsTrue(check,L"Cant find division in operation list");
+			Assert::IsTrue(check,L"Cant find division in operation list ");
 		}
 	};
 	

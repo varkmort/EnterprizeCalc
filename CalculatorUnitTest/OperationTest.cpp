@@ -54,7 +54,7 @@ namespace ModelTest
 				Assert::AreEqual(
 					std::to_string(-10.0),
 					std::to_string(w->operator()(-5.0, -5.0)),
-					L"Ќеверный ответ не не складывает числа"
+					L"Ќеверный ответ не не складывает числа "
 				);
 				delete w;
 			}
